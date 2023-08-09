@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Renganayaki.S
+- 👋 Hi, I’m Renganayaki.S
 - 👀 I’m interested in Java coding 
 - 🌱 I’m currently learning web-dev
 - 💞️ I’m looking to collaborate on ML
