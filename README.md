@@ -1,10 +1,9 @@
-- 👋 Hi, I’m Renganayaki.S
-- 👀 I’m interested in Java coding 
-- 🌱 I’m currently learning web-dev
-- 💞️ I’m looking to collaborate on ML
-- 📫 How to reach me srenganayaki.7104@gmail.com
+ Casanova Moonshine
 
-<!---
-casanovamoonshine/casanovamoonshine is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+- Topics covered: Java, C, C++, SQL, Python, HTML,C hash
+- Currently studying: Bootstrap, Ethical Hacking
+
+- Interested in: Web-Dev, ML
+  
+- Looking forward to collaborate on above listed topics
+- Reach me at casanova.moonshine@gmail.com
