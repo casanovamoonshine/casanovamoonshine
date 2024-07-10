@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            padding:0 ;
+            display: flex;
+            min-height: 100vh;
+        }
+        .intro-container {
+            flex: 1;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/cover-img.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .intro-container h2 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .intro-container p {
+            margin: 20px 0 0;
+            font-size: 20px;
+        }
+        .login-form {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .login-form form {
+            background-color: aliceblue;
+            width: 450px;
+            padding: 20px 75px;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 45px;
+            font-size: 40px;
+        }
+        .textBoxdiv {
+            border-bottom: 2px solid black;
+            position: relative;
+            margin: 35px 0;
+        }
+        .textBoxdiv input {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 30px;
+            font-size: 20px;
+            padding: 5px 0;
+            box-sizing: border-box;
+        }
+        .btnsubmit {
+            height: 45px;
+            width: 100%;
+            border: none;
+            outline: none;
+            color: white;
+            background: linear-gradient(to right top, #000, #222, #290675, #fff);
+            background-size: 200%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-position 0.4s, font-size 0.4s;
+        }
+        .btnsubmit:hover {
+            background-position: right;
+            font-size: 17px;
+        }
+        .signup {
+            color: black;
+            margin-top: 45px;
+            text-align: center;
+        }
+        .signup a {
+            color: #222;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="intro-container">
+            <div>
+                <h2>Hi, There</h2>
+                <p>Sign up today & start learning our course</p>
+            </div>
+        </div>
+        <div class="login-form">
+            <form action="">
+                <h2>Log In</h2>
+                <div class="textBoxdiv">
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="textBoxdiv">
+                    <input type="password" placeholder="Password">
+                </div>
+                <button class="btnsubmit" type="submit">Login</button>
+                <div class="signup">
+                    Not a member yet?
+                    <br>
+                    <a href="register.html">Register now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        // In-memory storage for users (in a real app, you'd use a database)
+let users = [
+  { username: "admin", password: "password123" },
+  { username: "user1", password: "password123" },
+  { username: "user2", password: "password123" }
+];
+
+// Function to handle login form submission
+function handleLogin(event) {
+  event.preventDefault();
+
+  const usernameInput = document.querySelector("input[type='text']");
+  const passwordInput = document.querySelector("input[type='password']");
+
+  const username = usernameInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  // Check if username and password are valid
+  for (let user of users) {
+    if (user.username === username && user.password === password) {
+      // Login successful, redirect to dashboard or whatever
+      alert("Login successful!");
+      return;
+    }
+  }
+
+  // Login failed, show error message
+  alert("Invalid username or password");
+}
+
+// Add event listener to login form
+const loginForm = document.querySelector("form");
+loginForm.addEventListener("submit", handleLogin);
+    </script>
+</body>
+</html>
